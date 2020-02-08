@@ -1,0 +1,4 @@
+function rent = rentPrediction(time)
+A = 
+end
+
