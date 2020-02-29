@@ -1,0 +1,14 @@
+function [double_stats, int64_stats] = comparePrecision(binary)
+d = myDoubleFromBinary(binary);
+i = int64(d);
+binary(64) = 1 - binary(64);
+d2 = myDoubleFromBinary(binary);
+d_precision = abs(d2 - d);
+i2 = int64(d2);
+i_precision = abs(i2 - i);
+maxVal = ones(1, 64);
+maxVal(1) = 0;
+maxVal(
+dMax = myDoubleFromBinary(maxVal)
+end
+
