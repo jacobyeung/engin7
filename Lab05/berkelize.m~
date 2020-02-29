@@ -1,0 +1,18 @@
+function mat = berkelize(mat, row, col, prev_color, new_color)
+if mat(row, col, :) ~= prev_color
+    return;
+end
+if strcmp(new_color, 'B')
+    mat(row, col, 1) = 0;
+    mat(row, col, 2) = 50;
+    mat(row, col, 3) = 98;
+    if row - 1 < 0
+        mat = berkelize(mat, row - 1, col, prev_color, new_color);
+    end
+    if row + 1 <= 111 
+        mat = berkelize(mat, row + 1, col, prev_color, new_color);
+    end
+    mat = berkelize(mat, row, col - 1, prev_color, new_color);
+    mat = berkelize(mat, row, col + 1, prev_color, new_color);
+end
+
