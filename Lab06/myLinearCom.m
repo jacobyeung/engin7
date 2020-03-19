@@ -1,4 +1,13 @@
 function [slope, intercept, fig] = myLinearCom(fn, n, choice)
+if ~isa(fn, 'function_handle')
+    disp('function must be a function handle');
+end
+if class(n) ~= 'double'
+    disp('n must be a double');
+end
+if ~islogical(choice);
+    disp('choice must be a logical');
+end
 fig = figure;
 t = ones(2, 5000);
 ele = [1:1:n];

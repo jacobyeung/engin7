@@ -1,4 +1,10 @@
 function [coefficient, fig] = myPolyCom(fn, n)
+if ~isa(fn, 'function_handle')
+    disp('function must be a function handle');
+end
+if class(n) ~= 'double'
+    disp('n must be a double');
+end
 t = [1:n];
 ele = [1:1:n];
 for i = 1:n
