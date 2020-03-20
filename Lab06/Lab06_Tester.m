@@ -112,7 +112,6 @@ n=2000;
 [complexity] = estimateTimeComplexity(fn,n)
 fprintf('\nThe correct results are:\ncomplexity = \n')
 fprintf('''O(n^2)''\n')
-
 fprintf('********* Test case 3 *********\n\n')
 fprintf('Your results:\n')
 fn= @(x) cubic(x);
@@ -120,7 +119,6 @@ n=400;
 [complexity] = estimateTimeComplexity(fn,n)
 fprintf('\nThe correct results are:\ncomplexity = \n')
 fprintf('''O(n^3)''\n')
-
 fprintf('********* Test case 4 *********\n\n')
 fprintf('Your results:\n')
 fn= @(x) logarithm(x);
