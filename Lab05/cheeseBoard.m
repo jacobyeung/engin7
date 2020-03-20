@@ -22,7 +22,7 @@ else
         else
             prev_path = [prev_path, 'R'];
         end
-        board = cheeseBoard(r, prev_path);
+        cheeseBoard(r, prev_path);
     end
     if myCheck(d)
         if size(prev_path) == 0
@@ -30,7 +30,7 @@ else
         else
             prev_path = [prev_path, 'D'];
         end
-        board = cheeseBoard(d, prev_path);
+        cheeseBoard(d, prev_path);
     end
 end
 path = board;
