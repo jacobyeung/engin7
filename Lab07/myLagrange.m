@@ -1,4 +1,13 @@
 function [y_dot,p] = myLagrange(x,y,x_dot)
+if ~isa(x, 'double')
+    disp('x must be a double');
+end
+if ~isa(y, 'double')
+    disp('y must be a double');
+end
+if ~isa(x_dot, 'double')
+    disp('x_dot must be a double');
+end
 deg = [1:(size(x, 2) - 1)];
 xgen = @(n) [n.^deg];
 xs = [];

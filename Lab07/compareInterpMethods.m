@@ -1,4 +1,16 @@
 function [fig, y_dot] = compareInterpMethods(x,y,x_dot,interp_methods)
+if ~strcmp('double', class(x))
+    disp('x must be double');
+end
+if ~strcmp('double', class(y))
+    disp('y must be double');
+end
+if ~strcmp('double', class(x_dot))
+    disp('x_dot must be double');
+end
+if ~strcmp('cell', class(interp_methods))
+    disp('interp_methods must be cell');
+end
 fig = figure;
 y_dot = [];
 plot(x, y, 'o');
