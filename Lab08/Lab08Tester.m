@@ -58,7 +58,7 @@ fprintf('\n*******************************\n')
 
 fprintf('********* Test case 1 *********\n\n')
 fprintf('Your result:\n')
-[area_under_curve] = myRiemann(@sin,[0 pi],10,'left')
+[area_under_curve] = myRiemann(@sin,[0 pi],10,'right')
 fprintf('\nThe correct result is:\n area_under_curve = \n     1.9835\n')
 
 
