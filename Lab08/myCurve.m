@@ -1,0 +1,1 @@
+function [edges]=myCurve(mu,sigma,rate)
