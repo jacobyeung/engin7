@@ -26,7 +26,7 @@ for i = 1:max_iter
         n_iter = Inf;
         return;
     end
-    x0 = x0 - f(x0)/df(x0)
+    x0 = x0 - f(x0)/df(x0);
     if abs(f(x0)) <= tol
         rt = x0;
         n_iter = i;
@@ -36,3 +36,13 @@ end
 rt = NaN;
 n_iter = max_iter;
 end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START OF AUTOGRADER FEEDBACK %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Well done, your score is 10 / 10
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF AUTOGRADER FEEDBACK %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

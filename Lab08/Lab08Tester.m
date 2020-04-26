@@ -100,7 +100,7 @@ fprintf('Your result:\n')
 [edges]=myCurve(75,10,[0.15 0.3 0.4 0.15])
 fprintf('\nThe correct result is:\n edges = \n    56.9000   69.9000   81.4000\n')
 
-
+ 
 
     
 %% Zip files

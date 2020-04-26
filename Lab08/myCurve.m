@@ -1,1 +1,1 @@
-function [edges]=myCurve(mu,sigma,rate)
+function [edges]=myCurve(mu,sigma,rate)q = @(x) sigma^-1 .* exp((x - mu)./sigma).*exp(-exp((x - mu)./sigma));f = @(x) q(x)/integral(q, 0, 100);edges = ones(1, 3);counter = 1;percent = rate(counter);tol = 0.001;for i = 0:0.1:100    if abs(integral(f, 0, i) - percent) < tol        edges(counter) = i;        counter = counter + 1;        if counter > 3            return;        end        percent = percent + rate(counter);        tol = tol * 1.25;    endend

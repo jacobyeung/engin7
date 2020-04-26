@@ -44,3 +44,26 @@ fvec = f(xn(:, 1), xn(:, 2));
 plot3(xn(:, 1), xn(:, 2), fvec, 'r');
 end
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START OF AUTOGRADER FEEDBACK %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Your score is 17.8 / 20.
+% 
+%  Test Case #1 - 4/4
+% 
+%  Test Case #2 - 4/4
+% 
+%  Test Case #3 - 0/4
+% % Error thrown, line 71 in function surf, line 42 in function newtons2D: Error using surf (line 71)
+% Data dimensions must agree.
+% 
+%  Test Case #4 - 4/4
+% 
+%  Test Case #5 - 4/4
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF AUTOGRADER FEEDBACK %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
