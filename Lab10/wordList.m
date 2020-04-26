@@ -76,6 +76,10 @@ classdef wordList < handle
         end
         
         function removedNode = removeWord(obj, word)
+            if obj.uniqueWords == 0
+                removedNode = 'This word is not in the list';
+                return
+            end
             if obj.uniqueWords == 1 && strcmp(obj.head.word,word)
                 removedNode = obj.head;
                 obj.head = myWordNode.empty;
@@ -112,6 +116,10 @@ classdef wordList < handle
         end
         
         function node = retrieveWord(obj, word)
+            if obj.uniqueWords == 0
+                node = 'This word does not appear in the list';
+                return
+            end
             current = obj.head;
             node = myWordNode;
             node.word = word;

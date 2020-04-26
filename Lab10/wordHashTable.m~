@@ -77,18 +77,14 @@ classdef wordHashTable < handle
         function removedWord = deleteWord(obj, word)
             hash = obj.hashFunction(word, obj.capacity);
             if isempty(obj.buckets{hash})
-                removedWord = ['The hash table does not contain the word' , ' ', word];
+                removedNode = ['The hash table does not contain the word' , ' ', word];
             else
                 if obj.buckets{hash}.wordFrequency(word) == 0
-                    removedWord = ['The hash table does not contain the word' , ' ', word];
+                    removedNode = ['The hash table does not contain the word' , ' ', word];
                 else
-                    removedWord = obj.buckets{hash}.removeWord(word);
-                    obj.uniqueWords = obj.uniqueWords - 1;
-                    obj.totalWords = obj.totalWords - removedWord.occurrences;
-                    obj.currentFR = obj.totalWords / obj.capacity;
-                end
+                    removedNode = obj.buckets{hash}.removeNode(word);
+                    obj.totalWords = obj.totalWords - 1;
             end
-        end
     end
 end
             
