@@ -26,13 +26,13 @@ classdef wordHashTable < handle
            if cellfun(@isempty, obj.buckets(hash))
                nodeList = wordList;
                nodeList.add(node);
-               obj.buckets(hash) = {nodeList};
+               obj.buckets{hash} = nodeList;
                obj.uniqueWords = obj.uniqueWords + 1;
            else
-               if obj.buckets(hash).wordFrequency == 0
+               if obj.buckets{hash}.wordFrequency == 0
                    obj.uniqueWords = obj.uniqueWords + 1; 
                end
-               obj.buckets(hash).add(node);
+               obj.buckets{hash}.add(node);
            end
            obj.currentFR = obj.totalWords / obj.capacity;
            if obj.currentFR > obj.maxFillRatio
